@@ -35,14 +35,10 @@ public class Main {
 				PrimeFinderThread.stopThreads();
 				System.out.println("Se han encontrado "+PrimeFinderThread.getPrimes().size()+
 				" primos hasta ahora.\nPresione Enter para continuar la ejecucion...");
-
 				Scanner sc = new Scanner(System.in);
-				sc.nextLine();
-				sc.close();
-
+				sc.nextLine(); sc.close();
 				PrimeFinderThread.resumeThreads();
 				for(Thread thread: threads) try {thread.join();} catch (Exception e) {}
-
 				System.out.println("Se encontraron "+PrimeFinderThread.getPrimes().size()+" primos.");
 				System.out.println("Done.");
 				executorService.shutdown();
