@@ -54,14 +54,14 @@ Parte III
 
     b.  Puede utilizarse el método join() de la clase Thread para sincronizar el hilo que inicia la carrera, con la finalización de los hilos de los galgos.  
 * Aplicación Original
-![](./img/parte2/Inicial.png)
+![](./img/parte2/Inicial.PNG)
 * Primera Corrección
 ![](./img/parte2/code1.png)
-![](./img/parte2/Punto1.png)
+![](./img/parte2/Punto1.PNG)
 
 2.  Una vez corregido el problema inicial, corra la aplicación varias veces, e identifique las inconsistencias en los resultados de las mismas viendo el ‘ranking’ mostrado en consola (algunas veces podrían salir resultados válidos, pero en otros se pueden presentar dichas inconsistencias). A partir de esto, identifique las regiones críticas () del programa.  
 En la siguiente imagen podemos ver que el galgo 16 y 7 llegaron en la posición 4, lo cual no deberia ser correcto.
-![](./img/parte2/Punto1.png)
+![](./img/parte2/Punto1.PNG)
 Se deberia poner regiones criticas donde se acceda al atributo *ultimaPosicionAlcanzada* de la clase RegistroLlegada
 3.  Utilice un mecanismo de sincronización para garantizar que a dichas regiones críticas sólo acceda un hilo a la vez. Verifique los resultados.
 ![](./img/parte2/code21.png)    
