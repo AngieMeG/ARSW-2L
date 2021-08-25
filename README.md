@@ -52,21 +52,24 @@ Parte III
 
     a.  La acción de iniciar la carrera y mostrar los resultados se realiza a partir de la línea 38 de MainCanodromo.
 
-    b.  Puede utilizarse el método join() de la clase Thread para sincronizar el hilo que inicia la carrera, con la finalización de los hilos de los galgos.
+    b.  Puede utilizarse el método join() de la clase Thread para sincronizar el hilo que inicia la carrera, con la finalización de los hilos de los galgos.  
+* Aplicación Original
+![](./img/parte2/Inicial.PNG)
+* Primera Corrección
+![](./img/parte2/code1.png)
+![](./img/parte2/Punto1.PNG)
 
-2.  Una vez corregido el problema inicial, corra la aplicación varias
-    veces, e identifique las inconsistencias en los resultados de las
-    mismas viendo el ‘ranking’ mostrado en consola (algunas veces
-    podrían salir resultados válidos, pero en otros se pueden presentar
-    dichas inconsistencias). A partir de esto, identifique las regiones
-    críticas () del programa.
+2.  Una vez corregido el problema inicial, corra la aplicación varias veces, e identifique las inconsistencias en los resultados de las mismas viendo el ‘ranking’ mostrado en consola (algunas veces podrían salir resultados válidos, pero en otros se pueden presentar dichas inconsistencias). A partir de esto, identifique las regiones críticas () del programa.  
+En la siguiente imagen podemos ver que el galgo 16 y 7 llegaron en la posición 4, lo cual no deberia ser correcto.
+![](./img/parte2/Punto1.PNG)
+Se deberia poner regiones criticas donde se acceda al atributo *ultimaPosicionAlcanzada* de la clase RegistroLlegada
+3.  Utilice un mecanismo de sincronización para garantizar que a dichas regiones críticas sólo acceda un hilo a la vez. Verifique los resultados.
+![](./img/parte2/code21.png)    
+![](./img/parte2/code22.png)  
+![](./img/parte2/code23.png)  
+![](./img/parte2/Punto2.png)  
 
-3.  Utilice un mecanismo de sincronización para garantizar que a dichas
-    regiones críticas sólo acceda un hilo a la vez. Verifique los
-    resultados.
 
-4.  Implemente las funcionalidades de pausa y continuar. Con estas,
-    cuando se haga clic en ‘Stop’, todos los hilos de los galgos
-    deberían dormirse, y cuando se haga clic en ‘Continue’ los mismos
-    deberían despertarse y continuar con la carrera. Diseñe una solución que permita hacer esto utilizando los mecanismos de sincronización con las primitivas de los Locks provistos por el lenguaje (wait y notifyAll).
+4.  Implemente las funcionalidades de pausa y continuar. Con estas, cuando se haga clic en ‘Stop’, todos los hilos de los galgos deberían dormirse, y cuando se haga clic en ‘Continue’ los mismos deberían despertarse y continuar con la carrera. Diseñe una solución que permita hacer esto utilizando los mecanismos de sincronización con las primitivas de los Locks provistos por el lenguaje (wait y notifyAll).
+![](./img/parte2/Punto2-4.gif)
 

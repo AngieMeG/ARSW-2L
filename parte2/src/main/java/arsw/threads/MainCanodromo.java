@@ -34,13 +34,16 @@ public class MainCanodromo {
                                 //inicia los hilos
                                 galgos[i].start();
                             }
-                            for(Galgo galgo: galgos) {
-                                try { galgo.join(); }
-                                catch (InterruptedException e) { e.printStackTrace();}
+                            for(Galgo galgo : galgos){
+                                try{
+                                    galgo.join();
+                                } catch(InterruptedException e){
+                                    e.printStackTrace();
+                                }
                             }
                             can.winnerDialog(reg.getGanador(),reg.getUltimaPosicionAlcanzada() - 1); 
-                                System.out.println("El ganador fue:" + reg.getGanador());
-                            }
+                            System.out.println("El ganador fue: " + reg.getGanador());
+                        }
                     }.start();
                 }
             }
@@ -65,7 +68,5 @@ public class MainCanodromo {
                 }
             }
         );
-
     }
-
 }

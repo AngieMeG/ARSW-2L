@@ -29,8 +29,8 @@ public class Galgo extends Thread {
 			carril.displayPasos(paso);
 			if (paso == carril.size()) {	
 				synchronized (regl){
-					carril.finish();
 					int ubicacion=regl.getUltimaPosicionAlcanzada();
+					carril.finish(ubicacion);
 					regl.setUltimaPosicionAlcanzada(ubicacion+1);
 					System.out.println("El galgo "+this.getName()+" llego en la posicion "+ubicacion);
 					if (ubicacion==1) regl.setGanador(this.getName());					
@@ -38,7 +38,6 @@ public class Galgo extends Thread {
 			}
 		}
 	}
-
 
 	@Override
 	public void run() {
@@ -67,5 +66,4 @@ public class Galgo extends Thread {
 		  isPaused.notifyAll();
 		}
 	}
-
 }

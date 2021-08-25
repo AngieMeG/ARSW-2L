@@ -101,8 +101,8 @@ public class Carril {
 	/**
 	 * Indica que se ha llegado al final del carril
 	 */
-	public void finish() {
-		llegada.setText("!");
+	public void finish(int position) {
+		llegada.setText(""+position);
 	}
 
 	public void displayPasos(int n) {

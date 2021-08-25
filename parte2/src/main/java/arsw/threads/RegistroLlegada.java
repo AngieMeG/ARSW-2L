@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class RegistroLlegada {
 
-	private AtomicInteger ultimaPosicionAlcanzada= new AtomicInteger(1);
+	private AtomicInteger ultimaPosicionAlcanzada = new AtomicInteger(1);
 
 	private String ganador=null;
 	
